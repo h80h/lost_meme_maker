@@ -52,3 +52,12 @@ input {
   margin-top: 1vh;
   position: relative;
 }
+
+a {
+  text-decoration: none;
+  margin-top: 2vh;
+  color: black;
+  font-size: small;
+  font-family: arial;
+  font-style: italic;
+}

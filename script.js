@@ -8,7 +8,6 @@ const template = new Image();
 const kittykaki = new Image();
 kittykaki.src = 'image/kittykaki_dance.png'
 
-// draw default before any input
 padToSquare(kittykaki, 500)
 copyImageToCanvas();
 

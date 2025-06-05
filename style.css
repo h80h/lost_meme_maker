@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* disable scrolling down */
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#meme_preview {
+  display: none;
+}
+
+.container {
+  display: flex;
+  width: 250px;
+  justify-content: space-around;
+  position: absolute;
+  top: 170px;
+}
+
+label {
+  width: 50px;
+  text-align: center;
+  font-size: large;
+  border-radius: 3px;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+#canvas2 {
+  transform: scale(0.6); /* 300/500 = 0.6 */
+  transform-origin: top center;
+  position: absolute;
+  top: 210px;
+}
+
+#canvas1 {
+  transform: scale(0.3);
+  transform-origin: top center;
+  margin-top: 1vh;
+  position: relative;
+}

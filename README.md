@@ -1,2 +1,2 @@
-This is a meme template, hace fun!
+This is a meme template, have fun!
 (kittykaki, kemono chan, monokuro)

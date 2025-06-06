@@ -33,6 +33,12 @@ html, body {
   top: 170px;
 }
 
+p {
+  position: absolute;
+  top: 180px;
+  font-size: small;
+}
+
 label {
   width: 50px;
   text-align: center;

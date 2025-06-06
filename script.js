@@ -5,11 +5,6 @@ const ctx1 = canvas1.getContext("2d");
 const canvas2 = document.getElementById("canvas2");
 const ctx2 = canvas2.getContext("2d");
 const template = new Image();
-const kittykaki = new Image();
-kittykaki.src = 'image/kittykaki_dance.png'
-
-padToSquare(kittykaki, 500)
-copyImageToCanvas();
 
 // download function
 document.getElementById('download').addEventListener('click', function() {
@@ -33,6 +28,7 @@ inputFile.onchange = async () => {
   memePreview.src = loadedImage.src;
 
   // give enough time to load, and then clear
+  
   ctx1.clearRect(0, 0, 189, 189);
   ctx2.clearRect(300, 300, 189, 189);
   

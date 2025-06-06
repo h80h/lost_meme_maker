@@ -13,7 +13,16 @@ html, body {
 }
 
 #meme_preview {
+  position: relative;
+  margin-top: 1vh;
   display: none;
+}
+
+#meme_default {
+  position: absolute;
+  top: 0px;
+  width: 150px;
+  height: 150px;
 }
 
 .container {
@@ -44,6 +53,14 @@ input {
   transform-origin: top center;
   position: absolute;
   top: 210px;
+  z-index: 1;
+}
+
+#og_output {
+  position: absolute;
+  top: 210px;
+  width: 300px;
+  height: 300px;
 }
 
 #canvas1 {
@@ -51,11 +68,13 @@ input {
   transform-origin: top center;
   margin-top: 1vh;
   position: relative;
+  z-index: 1;
 }
 
 a {
   text-decoration: none;
-  margin-top: 2vh;
+  position: absolute;
+  top: 510px;
   color: black;
   font-size: small;
   font-family: arial;

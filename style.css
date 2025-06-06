@@ -43,7 +43,6 @@ label {
   width: 50px;
   text-align: center;
   font-size: large;
-  border-radius: 3px;
 }
 
 label:hover {

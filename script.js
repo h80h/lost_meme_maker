@@ -5,13 +5,24 @@ const ctx1 = canvas1.getContext("2d");
 const canvas2 = document.getElementById("canvas2");
 const ctx2 = canvas2.getContext("2d");
 const template = new Image();
+const memeDefault = new Image();
+memeDefault.src = "image/kittykaki_dance.png";
+const ogOutput = new Image();
+ogOutput.src = "image/lost_meme_og.png";
 
-// download function
-document.getElementById('download').addEventListener('click', function() {
+function downloadImage(imageUrl) {
   const link = document.createElement('a');
-  link.download = 'feel_lost.png';
-  link.href = canvas2.toDataURL('image/png');
+  link.download = "feel_lost.png";
+  link.href = imageUrl;
   link.click();
+}
+
+document.getElementById('download').addEventListener('click', function() {
+  if (memePreview.src === memeDefault.src) {
+    downloadImage(ogOutput.src);
+  } else {
+    downloadImage(canvas2.toDataURL('image/png'));
+  }
 });
 
 // only the Promise pattern works fine!
@@ -35,15 +46,6 @@ inputFile.onchange = async () => {
   padToSquare(memePreview, 500);
   copyImageToCanvas();
 };
-
-function copyImageToCanvas() {
-  template.src = 'image/lost_meme_template.png';
-
-  template.onload = function() {
-    ctx2.drawImage(template, 0, 0, 500, 500);
-    ctx2.drawImage(canvas1, 300, 300, 189, 189);
-  };
-}
 
 function padToSquare(imageElement, squareSize) {
     
@@ -69,4 +71,13 @@ function padToSquare(imageElement, squareSize) {
       ctx1.drawImage(imageElement, x, y, scaledWidth, scaledHeight);
     }
     return canvas1;
+}
+
+function copyImageToCanvas() {
+  template.src = 'image/lost_meme_template.png';
+
+  template.onload = function() {
+    ctx2.drawImage(template, 0, 0, 500, 500);
+    ctx2.drawImage(canvas1, 300, 300, 189, 189);
+  };
 }

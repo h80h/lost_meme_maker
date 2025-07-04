@@ -13,16 +13,22 @@ html, body {
 }
 
 #meme_preview {
-  position: relative;
-  margin-top: 1vh;
   display: none;
 }
 
 #meme_default {
   position: absolute;
-  top: 0px;
-  width: 150px;
-  height: 150px;
+  top: 20px;
+  transform: scale(0.9);
+}
+
+#canvas1 {
+  transform: scale(0.35);
+  transform-origin: top center;
+  margin-top: 1vh;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
 }
 
 .container {
@@ -30,19 +36,21 @@ html, body {
   width: 250px;
   justify-content: space-around;
   position: absolute;
-  top: 170px;
+  top: 210px;
 }
 
 p {
   position: absolute;
-  top: 180px;
-  font-size: small;
+  top: 220px;
+  font-size: 16px;
 }
 
 label {
   width: 50px;
   text-align: center;
   font-size: large;
+  z-index: 1;
+  font-size: 20px;
 }
 
 label:hover {
@@ -54,34 +62,176 @@ input {
 }
 
 #canvas2 {
-  transform: scale(0.6); /* 300/500 = 0.6 */
+  transform: scale(0.7); /* 300/500 = 0.6 */
   transform-origin: top center;
   position: absolute;
-  top: 210px;
+  top: 260px;
   z-index: 1;
 }
 
 #og_output {
   position: absolute;
-  top: 210px;
-  width: 300px;
-  height: 300px;
-}
-
-#canvas1 {
-  transform: scale(0.3);
-  transform-origin: top center;
-  margin-top: 1vh;
-  position: relative;
-  z-index: 1;
+  top: 185px;
+  width: 500px;
+  height: 500px;
+  transform: scale(0.7);
 }
 
 a {
   text-decoration: none;
   position: absolute;
-  top: 510px;
+  top: 615px;
   color: black;
-  font-size: small;
+  font-size: 16px;
   font-family: arial;
   font-style: italic;
+}
+
+@media (min-width: 640px) and (max-width: 960px) and (min-height: 780px) {
+  #meme_default {
+    top: 105px;
+    transform: scale(1.0);
+  }
+
+  #canvas1 {
+    transform: scale(0.378);
+    top: 105px;
+  }
+
+  #canvas2, #og_output {
+    transform: scale(0.8);
+    top: 320px;
+  }
+
+  #canvas2 {
+    top: 370px;
+  }
+
+  .container {
+    top: 310px;
+  }
+
+  a{
+    font-size: 18px;
+    top: 775px;
+  }
+
+  p {
+    font-size: 18px;
+    top: 320px;
+  }
+}
+
+@media (max-width: 390px) {
+  #meme_default {
+    top: 0px;
+  }
+
+  #canvas1 {
+    top: -5px;
+  }
+
+  .container {
+    top: 180px;
+  }
+
+  p {
+    top: 190px;
+    font-size: 16px;
+  }
+
+  #og_output {
+    transform: scale(0.7);
+    top: 165px;
+  }
+
+  #canvas2 {
+    transform: scale(0.7);
+    top: 245px;
+  }
+
+  a{
+    top:595px;
+  }
+}
+
+@media (max-width: 326px) {
+  #meme_default {
+    top: -15px;
+    transform: scale(0.8);
+  }
+
+  #canvas1 {
+    top: -5px;
+    transform: scale(0.3024);
+  }
+
+  .container {
+    top: 155px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  p {
+    padding: 0 25px;
+    top: 165px;
+    line-height: 0.9;
+  }
+
+  #og_output {
+    transform: scale(0.6);
+    top: 115px;
+  }
+
+  #canvas2 {
+    transform: scale(0.6);
+    top:215px;
+  }
+
+  a{
+    top: 520px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  #meme_default {
+    top: -10px;
+    transform: scale(0.7);
+  }
+
+  #canvas1 {
+    top: 15px;
+    transform: scale(0.2646);
+  }
+
+  .container {
+    top: 155px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    top: 160px;
+    line-height: 1;
+  }
+
+  #og_output {
+    transform: scale(0.5);
+    top: 85px;
+  }
+
+  #canvas2 {
+    transform: scale(0.5);
+    top:210px;
+  }
+
+  a{
+    top: 470px;
+  }
 }
